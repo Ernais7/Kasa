@@ -1,6 +1,29 @@
 .header {
   display: flex;
-}
-.logo {
-  font-size: 20px;
+  margin-top: 45px;
+  justify-content: space-between;
+  align-items: center;
+
+  .logo {
+    font-size: 20px;
+  }
+  .nav__list {
+    display: flex;
+    list-style-type: none;
+    gap: 65px;
+
+    .nav__item {
+      font-size: 24px;
+      font-weight: 500;
+      &--link{
+        text-decoration: none;
+      }
+      &--link:visited{
+        color: black;
+      }
+      &--link:hover{
+        text-decoration: underline;
+      }
+    }
+  }
 }
