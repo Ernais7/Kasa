@@ -4,6 +4,7 @@ import SceneHome from "../../assets/paysageHome.png";
 import "../../style/sass/pages/index.scss";
 import HousingData from "../../data/housingData.json";
 import HousingCard from "../../component/housingCard.jsx"
+import Footer from "../../component/Footer/footer.jsx";
 
 function Home() {
   return (
@@ -20,6 +21,7 @@ function Home() {
           </div>
         ))}
       </div>
+      <Footer />
     </div>
   );
 }

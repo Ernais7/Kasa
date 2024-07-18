@@ -1,0 +1,24 @@
+.foot {
+  height: 209px;
+  background-color: black;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%); /* permet de compenser la marge auto */
+  padding: 20px;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &--logo{
+        margin: 15px;
+    }
+    &--title {
+      color: white;
+      font-size: 24px;
+      font-weight: 500;
+    }
+  }
+}
