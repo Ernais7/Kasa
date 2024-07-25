@@ -9,7 +9,7 @@
     border-radius: 5px;
     padding: 10px;
     background-color: #ff6060;
-    margin-bottom: 30px;
+    z-index: 10;
 
     .fa-solid {
       font-size: 35px;
@@ -17,6 +17,7 @@
       transition: transform 0.5s;
       position: absolute;
       right: 10px;
+      top: 20px;
       cursor: pointer;
     }
 
@@ -36,33 +37,21 @@
   }
 
   &__text {
-    display: none;
-    animation: fade-in-top 0.6s ease-in-out both;
-    padding: 10px;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+    padding: 0 10px;
     border-radius: 5px;
     background-color: #f6f6f673;
     width: 1023px;
     margin-bottom: 30px;
   }
-  @keyframes fade-in-top {
-    0% {
-      transform: translateY(-30px);
-      opacity: 0;
-    }
-    
-    100% {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
 
-  // Lorsque la carte est ouverte
-  &.open {
+  .open {
     .bar__text {
-      display: block;
-    }
-    .bar__content {
-      margin-bottom: 0px;
+      max-height: 200px;
+      opacity: 1;
     }
   }
 }
