@@ -1,0 +1,48 @@
+.carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+  &__slide {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & img {
+      border-radius: 25px;
+      height: 415px;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  &__button--left {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    right: 92%;
+  }
+  &__button--right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    left: 92%;
+  }
+  &__counter {
+    font-weight: 500;
+    margin-top: 350px;
+    font-size: 18px;
+    position: absolute;
+    color: white;
+  }
+}
