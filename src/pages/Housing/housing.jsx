@@ -1,9 +1,11 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import CustomCarousel from "../../component/Caroussel/caroussel"; // Assurez-vous que le chemin est correct
+import CustomCarousel from "../../component/Caroussel/caroussel";
 import Header from "../../component/Header/header.jsx";
 import Footer from "../../component/Footer/footer.jsx";
 import HousingData from "../../data/housingData.json";
+import "../../style/sass/pages/housing.scss";
+import Bar from "../../component/Bar/bar.jsx";
 
 function Housing() {
   const { id } = useParams();
@@ -12,10 +14,47 @@ function Housing() {
   if (!lodging) {
     return <div>Logement non trouvé</div>;
   }
+
+  // Séparer le nom en mots
+  const hostNameParts = lodging.host.name.split(" ");
+
   return (
     <div>
       <Header />
       <CustomCarousel slides={lodging.pictures} />
+      <div className="lodging">
+        <div className="lodging__header">
+          <h1 className="lodging__title">{lodging.title}</h1>
+          <div className="lodging__host">
+            <p className="lodging__host--name">
+              {hostNameParts.map((part, index) => (
+                <span key={index} className="namePart">
+                  {part}
+                </span>
+              ))}
+            </p>
+            <img className="lodging__host--image" src={lodging.host.picture} alt={lodging.host.name} />
+          </div>
+        </div>
+        <p className="lodging__location">{lodging.location}</p>
+        <div className="lodging__tags">
+          {lodging.tags.map((tag, index) => (
+            <span key={index} className="tag">
+              {tag}
+            </span>
+          ))}
+        </div>
+        <div className="lodging__rating">
+          {Array.from({ length: 5 }, (_, index) => (
+            <i key={index} className={`fa-star ${index < lodging.rating ? "fas" : "fas gray"}`}></i>
+          ))}
+        </div>
+        <div className="lodging__bar">
+          <Bar data={{ title: "Description", content: lodging.description }} />
+          <Bar data={{ title: "Équipements", content: lodging.equipments.join(", ") }} />
+        </div>
+      </div>
+
       <Footer />
     </div>
   );
