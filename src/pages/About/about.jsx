@@ -11,9 +11,9 @@ function About() {
     <div>
       <Header />
       <Poster showText={""} image={SceneAbout} />
-      <div className="bar">
+      <div className="allBar">
         {AboutData.map((data) => (
-          <div className="bar__card" key={data.title}>
+          <div key={data.title}>
             <Bar data={data} />
           </div>
         ))}

@@ -1,10 +1,4 @@
-body {
-    margin: 0 auto;
-    font-family: "Montserrat", sans-serif;
-    box-sizing: border-box;
-    max-width: 1440px;
-    padding: 20px 100px 0;
-}
+
 .error__container{
     display: flex;
     flex-direction: column;
@@ -26,5 +20,24 @@ body {
     }
     &--link:visited{
         color: black;
+    }
+}
+
+@media (max-width: 768px){
+    .error__container{
+        &--title{
+            font-size: 96px;
+            margin: 65px 0 51px;
+        }
+        &--text{
+            font-size: 18px;
+            text-align: center;
+            &-break{
+                display: inline-block;
+            }
+        }
+        &--link{
+            font-size: 14px;
+        }
     }
 }

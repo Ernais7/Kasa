@@ -15,14 +15,31 @@
     .nav__item {
       font-size: 24px;
       font-weight: 500;
-      &--link{
+      &--link {
         text-decoration: none;
       }
-      &--link:visited{
+      &--link:visited {
         color: black;
       }
-      &--link:hover{
-        text-decoration: underline;
+    }
+  }
+}
+#sidebar a.active {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .header {
+    margin-top: 0;
+    .logo {
+      width: 145px;
+    }
+    .nav__list {
+      align-items: center;
+      white-space: nowrap;
+      gap: 26px;
+      .nav__item{
+        font-size: 15px;
       }
     }
   }

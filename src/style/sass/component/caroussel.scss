@@ -46,3 +46,28 @@
     color: white;
   }
 }
+
+@media (max-width: 768px){
+  .carousel{
+    margin-top: 30px;
+    &__slide{
+      & img {
+        height: 255px;
+        border-radius: 10px;
+      }
+    }
+    &__button--left{
+      right: 90%;
+    }
+    &__button--right{
+      left: 90%;
+    }
+    .arrowLeft, .arrowRight{
+      width: 30px;
+      height: 45px;
+    }
+    &__counter{
+      display: none;
+    }
+  }
+}

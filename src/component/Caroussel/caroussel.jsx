@@ -17,13 +17,13 @@ const CustomCarousel = ({ slides }) => {
   return (
     <div className="carousel">
       <button onClick={goToPrevious} className="carousel__button--left">
-        <img src={ArrowLeft} alt="Précédent" />
+        <img src={ArrowLeft} className="arrowLeft" alt="Précédent" />
       </button>
       <div className="carousel__slide">
         <img src={slides[currentIndex]} alt={`Slide ${currentIndex + 1}`} />
       </div>
       <button onClick={goToNext} className="carousel__button--right">
-        <img src={ArrowRight} alt="Suivant" />
+        <img src={ArrowRight} className="arrowRight" alt="Suivant" />
       </button>
       <div className="carousel__counter">
         {currentIndex + 1} / {slides.length}

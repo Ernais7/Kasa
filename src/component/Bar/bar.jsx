@@ -17,13 +17,13 @@ function Bar({ data }) {
     <div className={`bar ${isOpen ? 'open' : ''}`}>
       <div className="bar__content">
         <i 
-          className={`fa-solid fa-angle-down ${isOpen ? "rotated" : ""}`} 
+          className={`fa-solid fa-angle-up ${isOpen ? "rotated" : ""}`} 
           onClick={toggleText}
         ></i>
         <h3 className="bar__content--title">{title}</h3>
       </div>
       <div className="bar__text">
-        <p className="bar__content--text">{content}</p>
+        <p className="bar__text--content">{content}</p>
       </div>
     </div>
   );

@@ -12,6 +12,7 @@
   &__card {
     height: 340px;
     box-sizing: border-box;
+    overflow: hidden;
     &--image {
       object-fit: cover;
       width: 100%;
@@ -25,14 +26,43 @@
       font-weight: 700;
       overflow: hidden;
       text-overflow: ellipsis;
-      white-space: nowrap;
       position: relative;
-      bottom: 80px;
+      bottom: 100px;
       padding-left: 10px;
       text-shadow: 0px 4px 4px rgba(0, 0, 0, 1.5);
     }
     &--link {
       text-decoration: none;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .allBar{
+    margin-bottom: 37px;
+    margin-top: 40px;
+  }
+  .housing {
+    flex-direction: column;
+    gap: 22px;
+    padding: 0;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(335px, 1fr));
+    margin-bottom: 22px;
+
+    &__card {
+      height: 255px;
+      &--title-content {
+        height: 40%; /* Ajuste la hauteur pour mobile */
+      }
+
+      &--title {
+        font-size: 18px;
+        margin-top: 0; /* Ajuste la marge pour mobile */
+        bottom: 50px;
+      }
     }
   }
 }
