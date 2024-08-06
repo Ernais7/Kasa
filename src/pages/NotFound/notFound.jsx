@@ -6,7 +6,7 @@ import Footer from "../../component/Footer/footer.jsx";
 
 function NotFound() {
   return (
-    <div>
+    <>
       <Header />
       <div className='error__container'>
             <h1 className='error__container--title'>404</h1>
@@ -14,7 +14,7 @@ function NotFound() {
             <Link to="/" className='error__container--link'>Retourner sur la page d'accueil</Link>
         </div>
       <Footer />
-    </div>
+    </>
   );
 }
 

@@ -11,12 +11,14 @@
   &__host {
     display: flex;
     align-items: center;
+    justify-content: end;
     &--name {
       font-size: 18px;
       font-weight: 500;
       color: #ff6060;
       display: flex;
       flex-direction: column;
+      text-align: end;
       .namePart {
         margin-bottom: 5px;
         margin-right: 10px;
@@ -48,8 +50,7 @@
   &__rating {
     display: flex;
     justify-content: end;
-    position: relative;
-    bottom: 22px;
+    margin-bottom: 30px;
     .fa-star {
       font-size: 24px;
       margin-right: 10px;
@@ -88,19 +89,23 @@
     }
   }
 }
+.lodging__content{
+  display: flex;
+  flex-direction: column-reverse;
+  margin-top: -144px;
+  gap: 22px;
+}
 
 @media (max-width: 768px) {
   .lodging {
     &__header{
-      height: 60px;
+      line-height: 25px;
     }
     &__title {
       font-size: 18px;
     }
     &__host {
-      position: absolute;
-      top: 62.5%;
-      left: 67.5%;
+
       &--name {
         font-size: 12px;
       }
@@ -115,17 +120,18 @@
     }
     &__tags {
       display: flex;
+      flex-wrap: wrap;
       margin-bottom: 20px;
+      gap: 10px;
       & .tag {
         font-size: 10px;
         border-radius: 5px;
         padding: 5px 12px;
+        margin: 0;
       }
     }
     &__rating {
-      display: block;
-      margin-bottom: 20px;
-      position: initial;
+      margin: 0;
       .fa-star {
         font-size: 13px;
       }
@@ -147,5 +153,13 @@
         }
       }
     }
+  }
+  .lodging__content{
+    flex-direction: row;
+    margin: 0;
+    gap: 0;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: -20px;
   }
 }

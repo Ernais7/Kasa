@@ -8,7 +8,7 @@ import Footer from "../../component/Footer/footer.jsx";
 
 function About() {
   return (
-    <div>
+    <>
       <Header />
       <main>
         <Poster showText={""} image={SceneAbout} />
@@ -21,7 +21,7 @@ function About() {
         </div>
       </main>
       <Footer />
-    </div>
+    </>
   );
 }
 

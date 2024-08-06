@@ -4,7 +4,15 @@ body {
   box-sizing: border-box;
   max-width: 1440px;
   padding: 20px 100px 0;
-  
+  display: flex;
+  min-height: 100vh;
+}
+#root {
+  display: flex;
+  flex-direction: column;
+}
+main{
+  flex: 1;
 }
 .poster {
   height: 223px;

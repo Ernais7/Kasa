@@ -38,7 +38,7 @@ function Housing() {
               ))}
             </div>
           </div>
-          <div>
+          <div className="lodging__content"> 
             <div className="lodging__rating">
               {Array.from({ length: 5 }, (_, index) => (
                 <i key={index} className={`fa-star ${index < lodging.rating ? "fas" : "fas gray"}`}></i>
