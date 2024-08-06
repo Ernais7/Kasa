@@ -10,14 +10,16 @@ function About() {
   return (
     <div>
       <Header />
-      <Poster showText={""} image={SceneAbout} />
-      <div className="allBar">
-        {AboutData.map((data) => (
-          <div key={data.title}>
-            <Bar data={data} />
-          </div>
-        ))}
-      </div>
+      <main>
+        <Poster showText={""} image={SceneAbout} />
+        <div className="allBar">
+          {AboutData.map((data) => (
+            <div key={data.title}>
+              <Bar data={data} />
+            </div>
+          ))}
+        </div>
+      </main>
       <Footer />
     </div>
   );

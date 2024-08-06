@@ -1,4 +1,9 @@
+@import 'components/bar';
+@import 'components/caaroussel';
+@import 'components/footer';
 @import 'components/header';
 @import 'component/housingCard';
 
+@import 'pages/housing';
 @import 'pages/index';
+@import 'pages/notFound';

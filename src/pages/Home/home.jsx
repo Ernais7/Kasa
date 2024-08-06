@@ -9,18 +9,20 @@ import SceneHome from "../../assets/paysageHome.png";
 
 function Home() {
   return (
-    <div>
+    <>
       <Header />
-      <Poster showText={true} image={SceneHome} />
-      <div className="housing">
-        {HousingData.map((housing) => (
-          <div className="housing__card" key={housing.id}>
-            <HousingCard housing={housing} />
-          </div>
-        ))}
-      </div>
+      <main>
+        <Poster showText={true} image={SceneHome} />
+        <div className="housing">
+          {HousingData.map((housing) => (
+            <div className="housing__card" key={housing.id}>
+              <HousingCard housing={housing} />
+            </div>
+          ))}
+        </div>
+      </main>
       <Footer />
-    </div>
+    </>
   );
 }
 
