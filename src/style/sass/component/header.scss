@@ -3,6 +3,7 @@
   margin-top: 25px;
   justify-content: space-between;
   align-items: center;
+  padding: 20px 100px 0;
 
   .logo {
     font-size: 20px;
@@ -27,7 +28,11 @@
 #sidebar a.active {
   text-decoration: underline;
 }
-
+@media (max-width: 1024px) {
+  .header {
+    padding: 0;
+  }
+}
 @media (max-width: 768px) {
   .header {
     margin-top: 0;
@@ -38,7 +43,7 @@
       align-items: center;
       white-space: nowrap;
       gap: 26px;
-      .nav__item{
+      .nav__item {
         font-size: 15px;
       }
     }

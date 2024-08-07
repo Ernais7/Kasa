@@ -47,26 +47,36 @@
   }
 }
 
-@media (max-width: 768px){
-  .carousel{
+@media (max-width: 1024px) {
+  .carousel__button--right{
+    left: 86%;
+  }
+  .carousel__button--left{
+    right: 86%;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel {
     margin-top: 30px;
-    &__slide{
+    &__slide {
       & img {
         height: 255px;
         border-radius: 10px;
       }
     }
-    &__button--left{
+    &__button--left {
       right: 90%;
     }
-    &__button--right{
+    &__button--right {
       left: 90%;
     }
-    .arrowLeft, .arrowRight{
+    .arrowLeft,
+    .arrowRight {
       width: 30px;
       height: 45px;
     }
-    &__counter{
+    &__counter {
       display: none;
     }
   }
