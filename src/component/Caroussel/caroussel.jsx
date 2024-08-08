@@ -6,6 +6,16 @@ import "../../style/sass/component/caroussel.scss";
 const CustomCarousel = ({ slides }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  if (slides.length === 1) {
+    return (
+      <div className="carousel">
+        <div className="carousel__slide">
+          <img src={slides[0]} alt="Slide unique" />
+        </div>
+      </div>
+    );
+  }
+
   const goToNext = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
   };
