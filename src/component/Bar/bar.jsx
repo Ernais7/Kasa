@@ -23,7 +23,7 @@ function Bar({ data }) {
         <h3 className="bar__content--title">{title}</h3>
       </div>
       <div className="bar__text">
-        <p className="bar__text--content">{content}</p>
+        <h4 className="bar__text--content">{content}</h4>
       </div>
     </div>
   );

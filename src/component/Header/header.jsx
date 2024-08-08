@@ -10,12 +10,12 @@ function Header() {
       <nav id="sidebar">
         <ul className="nav__list">
           <li className="nav__item">
-            <NavLink exact to="/" className="nav__item--link" activeClassName="active">
+            <NavLink to="/" className={({ isActive }) => isActive ? "nav__item--link active" : "nav__item--link"}>
               Accueil
             </NavLink>
           </li>
           <li className="nav__item">
-            <NavLink to="/about" className="nav__item--link" activeClassName="active">
+            <NavLink to="/about" className={({ isActive }) => isActive ? "nav__item--link active" : "nav__item--link"}>
               A Propos
             </NavLink>
           </li>
